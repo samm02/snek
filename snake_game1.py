@@ -11,5 +11,10 @@ wn.tracer(0) # turns off animantion on the screen
 
 # main code goes here
 
+# Snake head
+head = turtle.Turtle()
+head.speed(0) #animation speed of the turtle module
+
+
 
 wn.mainloop() # keeps the window open
