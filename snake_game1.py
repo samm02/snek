@@ -3,7 +3,7 @@ import turtle
 import time
 import random
 
-delay = 0.1
+delay = 0.05
 
 # Score
 score = 0
@@ -109,9 +109,6 @@ while True:
         # Reset the score
         score = 0
 
-        # reset the delay
-        delay = 0.1
-
         pen.clear()
         pen.write("Score: {}  High Score: {}".format(score, high_score), align="center", font=("Courier", 24, "normal"))
 
@@ -126,12 +123,9 @@ while True:
         new_segment = turtle.Turtle()
         new_segment.speed(0)
         new_segment.shape("square")
-        new_segment.color("grey")
+        new_segment.color("black")
         new_segment.penup()
         segments.append(new_segment)
-
-        # Shorten the delay
-        delay -= 0.001
 
         # increase the score
         score += 1
@@ -171,9 +165,6 @@ while True:
 
             # reset the score
             score = 0
-
-            # reset the delay
-            delay = 0.1
 
     time.sleep(delay)
 
