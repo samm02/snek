@@ -13,7 +13,7 @@ high_score = 0
 
 wn = turtle.Screen()
 wn.title("SNEK")
-wn.bgcolor("green")
+wn.bgcolor("white")
 wn.setup(width=600, height=600)
 wn.tracer(0) # turns off animantion on the screen
 
@@ -42,7 +42,7 @@ segments = []
 pen = turtle.Turtle()
 pen.speed(0)
 pen.shape("square")
-pen.color("white")
+pen.color("black")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
@@ -94,7 +94,7 @@ while True:
     wn.update()
 
     # check for a collision with the border
-    if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290:
+    if head.xcor()>300 or head.xcor()<-300 or head.ycor()>300 or head.ycor()<-300:
         time.sleep(1)
         head.goto(0,0)
         head.direction = "stop"
@@ -151,7 +151,7 @@ while True:
 
     # Check for head collision with the body segments
     for segment in segments:
-        if segment.distance(head) < 20:
+        if segment.distance(head) < 1:
             time.sleep(1)
             head.goto(0,0)
             head.direction = "stop"
